@@ -1,0 +1,11 @@
+[Unit]
+Description=Boot Application
+After=network.target mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+ExecStart=/usr/bin/bootapp
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
